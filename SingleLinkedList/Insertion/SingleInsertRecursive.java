@@ -5,21 +5,21 @@ import SingleLinkedList.Node;
 public class SingleInsertRecursive {
     private Node head;
 
-    public Node getHead() {
-        return head;
+    // Public wrapper method
+    public void insertRecursive(int data) {
+        head = insertRecursive(head, data);  // Call private recursive method
     }
 
-    // Public method to insert at end recursively
-    public void insertAtEndRecursive(int data) {
-        head = insertRecursive(head, data);
-    }
-
-    // Private recursive method
-    private Node insertRecursive(Node current, int data) {
-        if (current == null) {
+    // Private recursive logic
+    private Node insertRecursive(Node node, int data) {
+        if (node == null) {
             return new Node(data);
         }
-        current.next = insertRecursive(current.next, data);
-        return current;
+        node.next = insertRecursive(node.next, data);
+        return node;
+    }
+
+    public Node getHead() {
+        return head;
     }
 }
