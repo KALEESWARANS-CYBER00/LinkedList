@@ -3,13 +3,13 @@ import SingleLinkedList.Traversal.*;
 
 public class LinkedList {
     public static void main(String[] args) {
-        SingleInsertSorted list = new SingleInsertSorted();
+        SingleInsertUnique list = new SingleInsertUnique();
 
-        list.insertSorted(30);
-        list.insertSorted(10);
-        list.insertSorted(20);
-        list.insertSorted(40);
-        list.insertSorted(25);
+        list.insertUnique(10);
+        list.insertUnique(20);
+        list.insertUnique(10); // Duplicate
+        list.insertUnique(30);
+        list.insertUnique(20); // Duplicate
 
         PrintListForward printer = new PrintListForward();
         printer.printListForward(list.getHead());
