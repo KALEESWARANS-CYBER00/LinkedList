@@ -9,6 +9,11 @@ public class SingleInsertBeforeValue {
         return head;
     }
 
+    public void setHead(Node node) {
+        this.head = node;
+    }
+
+
     public void insertBeforeValue(int target, int data) {
         Node newNode = new Node(data);
 
