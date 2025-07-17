@@ -3,11 +3,13 @@ import SingleLinkedList.Traversal.*;
 
 public class LinkedList {
     public static void main(String[] args) {
-        SingleInsertRecursive list = new SingleInsertRecursive();
+        SingleInsertSorted list = new SingleInsertSorted();
 
-        list.insertAtEndRecursive(10);
-        list.insertAtEndRecursive(20);
-        list.insertAtEndRecursive(30);
+        list.insertSorted(30);
+        list.insertSorted(10);
+        list.insertSorted(20);
+        list.insertSorted(40);
+        list.insertSorted(25);
 
         PrintListForward printer = new PrintListForward();
         printer.printListForward(list.getHead());
