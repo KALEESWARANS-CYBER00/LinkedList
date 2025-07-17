@@ -1,12 +1,15 @@
-import SingleLinkedList.Insertion.*;
-import SingleLinkedList.Traversal.*;
+import SingleLinkedList.Insertion.SingleInsertAfterNthNode;
+import SingleLinkedList.Traversal.PrintListForward;
 
 public class LinkedList {
     public static void main(String[] args) {
-        SingleInsertMultiple list = new SingleInsertMultiple();
+        SingleInsertAfterNthNode list = new SingleInsertAfterNthNode();
 
-        int[] values = {10, 20, 30, 40, 50};
-        list.insertMultiple(values);
+        list.insertAtEnd(10);
+        list.insertAtEnd(20);
+        list.insertAtEnd(30);
+
+        list.insertAfterNthNode(2, 25); // Insert 25 after 2nd node (i.e., after 20)
 
         PrintListForward printer = new PrintListForward();
         printer.printListForward(list.getHead());
