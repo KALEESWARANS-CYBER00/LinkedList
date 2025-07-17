@@ -1,15 +1,12 @@
-import SingleLinkedList.Insertion.SingleInsertAfterNthNode;
+import SingleLinkedList.Insertion.SingleInsertReverseOrder;
 import SingleLinkedList.Traversal.PrintListForward;
 
 public class LinkedList {
     public static void main(String[] args) {
-        SingleInsertAfterNthNode list = new SingleInsertAfterNthNode();
+        SingleInsertReverseOrder list = new SingleInsertReverseOrder();
 
-        list.insertAtEnd(10);
-        list.insertAtEnd(20);
-        list.insertAtEnd(30);
-
-        list.insertAfterNthNode(2, 25); // Insert 25 after 2nd node (i.e., after 20)
+        int[] values = {10, 20, 30, 40, 50};
+        list.insertMultipleReverse(values); // Inserts in reverse
 
         PrintListForward printer = new PrintListForward();
         printer.printListForward(list.getHead());
