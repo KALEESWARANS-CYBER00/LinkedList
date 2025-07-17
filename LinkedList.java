@@ -3,13 +3,15 @@ import SingleLinkedList.Traversal.*;
 
 public class LinkedList {
     public static void main(String[] args) {
-        SingleInsertBeforeValue list = new SingleInsertBeforeValue();
+        SingleInsertAfterValue list = new SingleInsertAfterValue();
 
-        list.insertBeforeValue(10, 10);  // Head becomes 10
-        list.insertBeforeValue(10, 5);   // Insert before 10 → 5 -> 10
-        list.insertBeforeValue(10, 8);   // Insert before 10 → 5 -> 8 -> 10
-        list.insertBeforeValue(5, 3);    // Insert before 5 → 3 -> 5 -> 8 -> 10
-        list.insertBeforeValue(100, 99); // Not found
+        list.insertAtEnd(10);
+        list.insertAtEnd(20);
+        list.insertAtEnd(30);
+
+        list.insertAfterValue(20, 25);  // Inserts 25 after 20
+        list.insertAfterValue(30, 35);  // Inserts 35 after 30
+        list.insertAfterValue(99, 50);  // Value not in list
 
         PrintListForward printer = new PrintListForward();
         printer.printListForward(list.getHead());
